@@ -1,0 +1,20 @@
+# Run outputs and source PDFs stay out of git
+results/
+docs/papers/
+
+# Claude Code local state
+.claude/settings.local.json
+.claude/.cache/
+CLAUDE.local.md
+
+# Local working notes
+docs/setup-todo.md
+
+# Julia (Manifest.toml is committed on purpose: it pins the environment)
+*.jl.cov
+*.jl.*.cov
+*.jl.mem
+docs/build/
+
+# macOS
+.DS_Store

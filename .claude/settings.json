@@ -1,0 +1,43 @@
+{
+  "permissions": {
+    "deny": [
+      "Edit(/test/reference/**)",
+      "Edit(/results/**)",
+      "Edit(/docs/papers/**)"
+    ],
+    "ask": [
+      "Edit(/CLAUDE.md)",
+      "Edit(/docs/specs/**)",
+      "Edit(/.claude/settings.json)",
+      "Edit(/.claude/hooks/**)",
+      "Edit(/.claude/rules/**)",
+      "Edit(/.claude/agents/**)",
+      "Edit(/.claude/skills/**)"
+    ],
+    "additionalDirectories": ["~/.julia/packages"]
+  },
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/fast-checks.sh\" mark",
+            "timeout": 20
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/fast-checks.sh\" gate",
+            "timeout": 600
+          }
+        ]
+      }
+    ]
+  }
+}

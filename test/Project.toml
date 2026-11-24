@@ -1,0 +1,22 @@
+[deps]
+Aqua = "4c88cf16-eb10-579e-8560-4a9242c79595"
+CO2CaptureAdsorptionModels = "a7e7edfb-1d91-41a2-8202-0cba8b04a3e8"
+JET = "c3a54625-cd67-489e-a8e7-0a5a0ff4e31b"
+JuliaSyntax = "70703baa-626e-46a2-a12c-08ffd08c73b4"
+Mocca = "eb14e3ba-90c8-11ed-0ecf-1dd2ea0d109c"
+Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
+Runic = "62bfec6d-59d7-401d-8490-b29ee721c001"
+StableRNGs = "860ef19b-820b-49d6-a774-d7a799459cd3"
+TOML = "fa267f1f-6049-4f14-aa54-33bafae1ed76"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[compat]
+Aqua = "0.8.19"
+JET = "0.13"
+JuliaSyntax = "~1.0.2"
+Mocca = "0.2"
+Pkg = "1"
+Runic = "~1.13.0"
+StableRNGs = "1"
+TOML = "1"
+Test = "1"

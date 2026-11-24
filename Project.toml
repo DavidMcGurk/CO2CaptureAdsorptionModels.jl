@@ -1,0 +1,16 @@
+name = "CO2CaptureAdsorptionModels"
+uuid = "a7e7edfb-1d91-41a2-8202-0cba8b04a3e8"
+version = "0.1.0"
+
+[workspace]
+projects = ["test"]
+
+[deps]
+Mocca = "eb14e3ba-90c8-11ed-0ecf-1dd2ea0d109c"
+
+[sources]
+Mocca = {rev = "27b7e6df45fb3065d2167f729e676b55a1d7b6c3", url = "https://github.com/sintefmath/Mocca.jl"}
+
+[compat]
+Mocca = "0.2"
+julia = "1.13"
