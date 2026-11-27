@@ -685,26 +685,31 @@ $$
 - Discretised balances (p. 4252). "It should be noted that the dispersion term in eq 20 is approximated using a combination of forward difference and finite volume schemes." (p. 4252)
 
 Eq. (20):
+
 $$
 \frac{\partial y_{i,j}}{\partial \tau} = \frac{1}{Pe}\frac{\bar T_j}{\bar P_j}\frac{1}{\Delta Z}\left(\left.\frac{\bar P}{\bar T}\right|_{j+0.5}\frac{y_{i,j+1} - y_{i,j}}{\Delta Z} - \left.\frac{\bar P}{\bar T}\right|_{j-0.5}\frac{y_{i,j} - y_{i,j-1}}{\Delta Z}\right) - \frac{\bar T_j}{\bar P_j}\frac{1}{\Delta Z}\left(\left.\frac{y_i\bar P}{\bar T}\bar v\right|_{j+0.5} - \left.\frac{y_i\bar P}{\bar T}\bar v\right|_{j-0.5}\right) - \psi\frac{\bar T_j}{\bar P_j}\frac{\partial x_{i,j}}{\partial \tau} - \frac{y_{i,j}}{\bar P_j}\frac{\partial \bar P_j}{\partial \tau} + \frac{y_{i,j}}{\bar T_j}\frac{\partial \bar T_j}{\partial \tau}
 $$
 
 Eq. (21):
+
 $$
 \frac{\partial \bar P_j}{\partial \tau} = -\frac{\bar T_j}{\Delta Z}\left(\left.\frac{\bar P}{\bar T}\bar v\right|_{j+0.5} - \left.\frac{\bar P}{\bar T}\bar v\right|_{j-0.5}\right) - \psi\bar T_j\sum_{i=1}^{n_{comp}}\frac{\partial x_{i,j}}{\partial \tau} + \frac{\bar P_j}{\bar T_j}\frac{\partial \bar T_j}{\partial \tau}
 $$
 
 Eq. (22):
+
 $$
 \frac{\partial x_{i,j}}{\partial \tau} = \alpha_i\left(x_{i,j}^* - x_{i,j}\right)
 $$
 
 Eq. (23):
+
 $$
 \frac{\partial \bar T_j}{\partial \tau} = \Omega_{1,j}\frac{1}{\Delta Z}\left(\frac{\bar T_{j+1} - \bar T_j}{\Delta Z} - \frac{\bar T_j - \bar T_{j-1}}{\Delta Z}\right) - \Omega_{2,j}\frac{1}{\Delta Z}\left(\bar v\bar P|_{j+0.5} - \bar v\bar P|_{j-0.5}\right) - \Omega_{3,j}\bar T_j\sum_{i=1}^{n_{comp}}\frac{\partial x_{i,j}}{\partial \tau} + \sum_{i=1}^{n_{comp}}\left(\sigma_{i,j}\frac{\partial x_{i,j}}{\partial \tau}\right) - \Omega_{4,j}\left(\bar T_j - \bar T_{w,j}\right) - \Omega_{2,j}\frac{\partial \bar P_j}{\partial \tau}
 $$
 
 Eq. (24):
+
 $$
 \frac{\partial \bar T_{w,j}}{\partial \tau} = \Pi_1\frac{1}{\Delta Z}\left(\frac{\bar T_{w,j+1} - \bar T_{w,j}}{\Delta Z} - \frac{\bar T_{w,j} - \bar T_{w,j-1}}{\Delta Z}\right) + \Pi_2\left(\bar T_j - \bar T_{w,j}\right) - \Pi_3\left(\bar T_{w,j} - \bar T_{a,j}\right)
 $$
