@@ -26,7 +26,7 @@ What is needed to reproduce the validation targets in Section 11, from the paper
 
 Implementation order is separate from this scope. The breakthrough case (Sec. 5) is implemented first.
 
-Not covered: the literature review of Sec. 1 and Table 1; the comparison of discretisation schemes and the convergence studies (Secs. 5–6); the optimisation studies (Sec. 7), apart from the Table 6 operating points; computational times.
+Not covered: the literature review of Sec. 1 and Table 1; the comparison of discretisation schemes and the convergence studies (Secs. 5–6), apart from the UDS curves of Figure 4b, c (V9), for which the UDS scheme itself, Eq. (25) (p. 4252), is cited but not transcribed; the optimisation studies (Sec. 7), apart from the Table 6 operating points; computational times.
 
 ## 3. Nomenclature
 Symbols as in the paper's Nomenclature (p. 4264) and text. Each meaning is sourced by the first of these that applies: (1) the paper's Nomenclature section: its wording, verbatim, with no citation; (2) an equation, table or figure number where the symbol is defined or printed, e.g. (Eq. 42), (Table 3), (Figure 1), (SI Table 1); (3) a page number, (p. n) or (SI p. n), only when no equation, table or figure applies. Wording taken from outside the Nomenclature is quoted exactly. Wording from two places is never merged into one uncited meaning, and explanatory words added by this spec are labelled "spec wording:". "SI unit" is the unit the code uses. Where the paper's unit differs, both are noted.
@@ -814,16 +814,17 @@ Open items affecting these definitions are in Section 12; each names the equatio
 ## 11. Validation targets
 Results in the source that this project can reproduce. Once a row is verified, the user copies it into `test/reference/haghpanah2013.toml` with a tolerance.
 
-### 11.1 Breakthrough targets (V1–V4)
+### 11.1 Breakthrough targets (V1–V4, V9)
 
-Common conditions for V2–V4: the breakthrough set-up of 7.1, with the Table 3 parameters (8.2) and derived values (8.4).
+Common conditions for V2–V4 and V9: the breakthrough set-up of 7.1, with the Table 3 parameters (8.2) and derived values (8.4).
 
 | ID | Figure or Table | Operating conditions | Quantity | Value | Printed or digitised | Page | Verified |
 |---|---|---|---|---|---|---|---|
 | V1 | Figure 3 | 25 °C, single component, P from 0 to 0.15 bar | $q^*$ of CO2 and N2 vs P (mmol g⁻¹) from Eq. (37), Table 2 | curve; to digitise | digitised | 4253 |  DM 26/11/26 |
-| V2 | Figure 4a | common; WENO, $N$ = 2000 | $y_{CO_2}$, $T/T_0$, $v/v_0$ (axis labels) "at the exit of the adsorption column" (p. 4256) vs time ("Time [-]" (p. 4256), 0–8000) | curves; to digitise | digitised | 4256 |  DM 26/11/26 |
+| V2 | Figure 4a–c | common; WENO, $N$ = 2000 | (a) $y_{CO_2}$, $T/T_0$, $v/v_0$ (axis labels) "at the exit of the adsorption column" (p. 4256) vs time ("Time [-]" (p. 4256), 0–8000); (b), (c) close-ups of $y_{CO_2}$ "at the two transitions" (p. 4256), time 490–550 and 3000–4400: only the curve with the legend label "WENO N=2000" (p. 4256), the reference of the text (p. 4254) | curves; to digitise | digitised | 4256 |  |
 | V3 | Sec. 5 text | common; WENO, $N$ = 2000 | time of "the sharp transition ... representing the breakthrough of the CO2 front" (p. 4254), in the Figure 4a profiles "at the column exit" (p. 4254) | "t ∼ 520 s" (p. 4254) | printed (approximate) | 4254 |  DM 26/11/26 |
 | V4 | Sec. 5 text | common; WENO, $N$ = 2000 | time of the second transition, "corresponding to the elution of the heat front" (p. 4254), in the Figure 4a profiles "at the column exit" (p. 4254) | "around 3600 s" (p. 4254) | printed (approximate) | 4254 |  DM 26/11/26 |
+| V9 | Figure 4b, c | common; UDS (Eq. 25, p. 4252), $N$ = 200 (caption, p. 4256) | $y_{CO_2}$ at the exit of the column vs time "at the two transitions" (p. 4256), time 490–550 and 3000–4400: the curve with the legend label "UDS" (p. 4256) | curves; to digitise | digitised | 4256 |  |
 
 ### 11.2 Cycle targets (V5–V8)
 
